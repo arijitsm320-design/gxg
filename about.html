@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About GreenXguard | Building India's Trust Platform for Sustainability</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            padding: 10rem 1.5rem 5rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.15) 50%, rgba(236, 253, 245, 0.8) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        /* Decorative images */
+        .hero-graphic {
+            position: absolute;
+            right: 3%;
+            top: 10%;
+            width: 420px;
+            max-width: 45%;
+            opacity: 0.95;
+            pointer-events: none;
+            filter: drop-shadow(0 12px 30px rgba(16, 185, 129, 0.12));
+            transform: translateZ(0);
+        }
+
+        .hero-leaf-decoration {
+            position: absolute;
+            top: -40px;
+            right: 5%;
+            width: 300px;
+            height: 300px;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .story-graphic {
+            position: absolute;
+            left: 3%;
+            top: 8%;
+            width: 220px;
+            max-width: 30%;
+            opacity: 0.08;
+            pointer-events: none;
+            transform: translateZ(0);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(30px);
+            }
+        }
+
+        .about-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .about-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+        }
+
+        .story-section {
+            padding: 5rem 1.5rem;
+            position: relative;
+            background: linear-gradient(to bottom, transparent, rgba(236, 253, 245, 0.5));
+        }
+
+        .story-section::before {
+            content: '🌱';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .story-section::after {
+            content: '🌿';
+            position: absolute;
+            bottom: 50px;
+            right: 5%;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .story-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .story-text {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-visual {
+            position: relative;
+        }
+
+        .story-card {
+            background: linear-gradient(135deg, white 0%, rgba(209, 250, 229, 0.3) 100%);
+            padding: 2rem;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+            border: 2px solid var(--primary-green);
+            border-left: 5px solid var(--primary-green);
+            transform: rotate(-1deg);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-card::before {
+            content: '🍀';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 6rem;
+            opacity: 0.05;
+        }
+
+        .story-card:hover {
+            transform: rotate(0deg) translateY(-10px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.25);
+            border-color: var(--dark-green);
+        }
+
+        .year-badge {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .mission-section {
+            padding: 5rem 1.5rem;
+            background: linear-gradient(135deg, var(--light-green) 0%, rgba(236, 253, 245, 0.7) 50%, var(--light-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .mission-section::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, white 0%, rgba(209, 250, 229, 0.15) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            padding: 4rem;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .mission-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-green), var(--secondary-green), var(--dark-green));
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .mission-card::after {
+            content: '🌿';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 5rem;
+            opacity: 0.1;
+        }
+
+        .mission-icon {
+            width: 5rem;
+            height: 5rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+        }
+
+        .mission-quote {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .mission-author {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .values-section {
+            padding: 5rem 1.5rem;
+            position: relative;
+            background: linear-gradient(to bottom, white, rgba(236, 253, 245, 0.3));
+        }
+
+        .values-section::before {
+            content: '🌱';
+            position: absolute;
+            top: 30px;
+            right: 10%;
+            font-size: 4rem;
+            opacity: 0.08;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, white 0%, rgba(209, 250, 229, 0.2) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.1);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .value-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .value-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+            border-color: var(--primary-green);
+            background: linear-gradient(135deg, white 0%, rgba(209, 250, 229, 0.35) 100%);
+        }
+
+        .value-card:hover::before {
+            opacity: 1;
+        }
+
+        .value-card h3 {
+            position: relative;
+            z-index: 1;
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
+        .value-card p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .value-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .team-section {
+            padding: 5rem 1.5rem;
+            background: linear-gradient(135deg, var(--gray-50) 0%, rgba(209, 250, 229, 0.1) 100%);
+            position: relative;
+        }
+
+        .team-section::before {
+            content: '🌿';
+            position: absolute;
+            bottom: 50px;
+            left: 5%;
+            font-size: 4rem;
+            opacity: 0.08;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15);
+        }
+
+        .team-avatar {
+            width: 6rem;
+            height: 6rem;
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(52, 211, 153, 0.2) 100%);
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 0 auto 1.5rem;
+        }
+
+        .team-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .team-role {
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        .milestones-section {
+            padding: 5rem 1.5rem;
+            position: relative;
+            background: linear-gradient(135deg, rgba(209, 250, 229, 0.1) 0%, transparent 100%);
+        }
+
+        .milestones-section::before {
+            content: '🍀';
+            position: absolute;
+            top: 50px;
+            left: 5%;
+            font-size: 4rem;
+            opacity: 0.08;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-green), var(--secondary-green), var(--dark-green));
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            transform: translateX(-50%);
+        }
+
+        .milestone {
+            position: relative;
+            margin-bottom: 3rem;
+            width: calc(50% - 40px);
+        }
+
+        .milestone:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        .milestone:nth-child(even) {
+            left: 50%;
+            text-align: left;
+            padding-left: 60px;
+        }
+
+        .milestone-point {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--primary-green), 0 0 15px rgba(16, 185, 129, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .milestone:hover .milestone-point {
+            box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.2), 0 0 20px rgba(16, 185, 129, 0.6);
+            transform: scale(1.2);
+        }
+
+        .milestone:nth-child(odd) .milestone-point {
+            right: -10px;
+        }
+
+        .milestone:nth-child(even) .milestone-point {
+            left: -10px;
+        }
+
+        .milestone-year {
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .milestone-text {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .founding-cta {
+            padding: 5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 50%, var(--secondary-green) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founding-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .founding-cta::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+        }
+
+        .founding-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .founding-icon {
+            width: 5rem;
+            height: 5rem;
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 2.5rem;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .milestone {
+                width: calc(100% - 80px);
+                left: 80px !important;
+                text-align: left !important;
+                padding-left: 40px !important;
+                padding-right: 0 !important;
+            }
+
+            .milestone:nth-child(odd) .milestone-point,
+            .milestone:nth-child(even) .milestone-point {
+                left: -50px;
+            }
+
+            .mission-card {
+                padding: 2rem;
+            }
+
+            .mission-quote {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.jpeg" alt="GreenXguard Logo" class="logo-img">
+                <span class="brand-name">GreenXguard</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="whyus.html" class="nav-link">Why Us?</a>
+            </div>
+
+            <button class="hamburger-menu" id="menuToggle" aria-label="Toggle menu">
+                <div class="hamburger-icon">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </div>
+            </button>
+
+            <nav class="mobile-nav" id="navMenu">
+                <div class="mobile-nav-header">
+                    <span class="nav-title">Menu</span>
+                    <button class="nav-close" id="navClose">×</button>
+                </div>
+                <div class="mobile-nav-content">
+                    <a href="index.html" class="mobile-nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="services.html" class="mobile-nav-link">
+                        <i class="fas fa-shield-alt"></i> Services
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <img src="assets/gradient-background.svg" alt="green background" class="hero-graphic" aria-hidden="true">
+        <div class="container">
+            <h1 class="about-title">Building India's Trust Platform for Sustainability</h1>
+            <p class="about-subtitle">
+                We're launching GreenXguard to solve a critical problem: Indian consumers want sustainable products but
+                don't know who to trust.
+                With CCPA 2024 enforcement beginning, we're creating the verification standard that brands need and
+                consumers deserve.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Our Story -->
+    <section class="story-section">
+        <img src="assets/leaf-icon.svg" alt="leaf decoration" class="hero-leaf-decoration" aria-hidden="true">
+        <img src="assets/gradient-background.svg" alt="green background" class="story-graphic" aria-hidden="true">
+        <div class="container">
+            <h2 class="section-title">Our Founding Story</h2>
+            <p class="section-subtitle">Why we're building GreenXguard now</p>
+
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2>The Perfect Timing</h2>
+                    <p class="story-text">
+                        In early 2024, as CCPA announced strict penalties for greenwashing, we saw two converging
+                        trends:
+                        Indian consumers were increasingly seeking sustainable options, but brands had no clear way to
+                        prove their claims were authentic.
+                    </p>
+                    <p class="story-text">
+                        The market needed a solution that was both legally sound (CCPA-compliant) and consumer-friendly
+                        (easily verifiable).
+                        Existing certifications were either too generic, too expensive, or didn't address the specific
+                        needs of Indian D2C brands.
+                    </p>
+                    <p class="story-text">
+                        So we decided to build it ourselves. GreenXguard is designed specifically for the Indian market,
+                        focusing on the claims that matter most to Indian consumers and the compliance requirements that
+                        matter most to brands.
+                    </p>
+                </div>
+                <div class="story-visual">
+                    <div class="story-card animate-on-scroll" data-animation="slideInRight">
+                        <div class="year-badge">2025 LAUNCH</div>
+                        <h3>Why Now?</h3>
+                        <ul style="text-align: left; color: var(--gray-600); line-height: 1.6;">
+                            <li>CCPA begins greenwashing enforcement</li>
+                            <li>87% of Indian consumers want sustainable options</li>
+                            <li>No existing Indian-focused verification platform</li>
+                            <li>Perfect timing for market leadership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-card animate-on-scroll" data-animation="fadeInUp">
+                <div class="mission-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <p class="mission-quote">
+                    "To create India's most trusted sustainability verification platform - where every green claim is
+                    authentic,
+                    every badge is meaningful, and every consumer can shop with complete confidence in a brand's
+                    environmental commitments."
+                </p>
+                <p class="mission-author">— GreenXguard Founding Vision</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Our Founding Principles</h2>
+            <p class="section-subtitle">The values that guide our platform development</p>
+
+            <div class="values-grid">
+                <div class="value-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity First</h3>
+                    <p>We verify claims thoroughly or not at all. Every badge must represent genuine sustainability
+                        practices.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Brand Partnership</h3>
+                    <p>We work with brands as partners, helping them build authentic sustainability stories that
+                        consumers can believe in.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Real Environmental Impact</h3>
+                    <p>Our work should contribute to genuine environmental improvement by rewarding authentic
+                        sustainable practices.</p>
+                </div>
+
+                <div class="value-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Innovation Focus</h3>
+                    <p>We're building a modern digital verification platform, not just replicating outdated
+                        certification models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Founding Team</h2>
+            <p class="section-subtitle">Experts in sustainability, Indian consumer law, and technology</p>
+
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="team-avatar">AS</div>
+                    <h3>Arijit Sarkar</h3>
+                    <p class="team-role">Founder & CEO</p>
+                    <p class="team-bio">2+ years in sustainability consulting for Indian D2C brands. Passionate about
+                        making genuine green practices profitable.</p>
+                </div>
+
+                <div class="team-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="team-avatar">AS</div>
+                    <h3>Arpita Sarkar</h3>
+                    <p class="team-role">Director</p>
+                    <p class="team-bio">Specializing in CCPA compliance. Ensures our
+                        verification meets all legal requirements.</p>
+                </div>
+
+                <!-- <div class="team-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="team-avatar">RM</div>
+                    <h3>Rahul Mehta</h3>
+                    <p class="team-role">Verification Lead</p>
+                    <p class="team-bio">Environmental scientist with expertise in lifecycle assessment. Designs our
+                        rigorous verification protocols.</p>
+                </div>
+
+                <div class="team-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="team-avatar">NK</div>
+                    <h3>Neha Kapoor</h3>
+                    <p class="team-role">Technology Director</p>
+                    <p class="team-bio">Builds secure, scalable verification systems. Previously led tech at e-commerce
+                        verification platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Roadmap -->
+    <section class="milestones-section">
+        <div class="container">
+            <h2 class="section-title">Our Launch Roadmap</h2>
+            <p class="section-subtitle">Where we're headed in our first year</p>
+
+            <div class="timeline">
+                <div class="milestone animate-on-scroll" data-animation="slideInLeft">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-year">Q1 2025</div>
+                    <p class="milestone-text">Platform development & founding member recruitment. Building our
+                        verification framework.</p>
+                </div>
+
+                <div class="milestone animate-on-scroll" data-animation="slideInRight">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-year">Q2 2025</div>
+                    <p class="milestone-text">Launch of digital verification pages with QR
+                        codes.</p>
+                </div>
+
+                <div class="milestone animate-on-scroll" data-animation="slideInLeft">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-year">Q3 2025</div>
+                    <p class="milestone-text">Expansion to new sustainability categories. Launch of verification
+                        Website.</p>
+                </div>
+
+                <!-- <div class="milestone animate-on-scroll" data-animation="slideInRight">
+                    <div class="milestone-point"></div>
+                    <div class="milestone-year">Q4 2024</div>
+                    <p class="milestone-text">Market leadership position. Recognition as India's go-to sustainability
+                        verification platform.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="#home" class="logo-wrapper">
+                            <span class="brand-name">GreenXguard</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">CCPA-compliant green claim verification for Indian startups. Avoid
+                        penalties, build trust.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Basic Verification</a></li>
+                        <li><a href="services.html">Verified Badge</a></li>
+                        <li><a href="services.html">CCPA Compliance</a></li>
+                        <li><a href="services.html">Digital Verification Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact.greenxguard@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 82409 47366</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 GreenXguard. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a
+                        href="termsofservice.html">Terms of
+                        Service</a> | <a href="#">*Disclaimer</a></p>
+                <p class="disclaimer">GreenXguard is a private verification service and not a government certification
+                    body. We help companies comply with CCPA guidelines. </p>
+                <p class="disclaimer" style="font-size: larger; color: rgb(255, 255, 255);">Our verification is based on
+                    client-provided documentation. We are not liable for inaccuracies in client-submitted information.
+                    Clients remain solely responsible for claim authenticity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+
+</html>

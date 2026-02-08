@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | GreenXguard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Privacy Policy Specific Styles */
+        .policy-hero {
+            padding: 10rem 1.5rem 5rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%2310B981" fill-opacity="0.05" d="M0,0 L100,0 L100,100 Z"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .policy-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-content {
+            padding: 5rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .policy-section h2 i {
+            color: var(--primary-green);
+        }
+
+        .policy-section h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--gray-800);
+        }
+
+        .policy-section p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--primary-light);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-green);
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--primary-dark);
+            font-weight: 500;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+            margin: 2rem 0;
+        }
+
+        .info-card h4 {
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-card h4 i {
+            color: var(--primary-green);
+        }
+
+        .contact-info {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-700);
+        }
+
+        .contact-item i {
+            color: var(--primary-green);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        @media (max-width: 768px) {
+            .policy-title {
+                font-size: 2.5rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.jpeg" alt="GreenXguard Logo" class="logo-img">
+                <span class="brand-name">GreenXguard</span>
+            </a>
+        </div>
+    </nav>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="policy-hero">
+        <div class="container">
+            <h1 class="policy-title">Privacy Policy</h1>
+            <p class="policy-subtitle">
+                Your privacy is important to us. This Privacy Policy explains how GreenXguard collects, uses,
+                discloses, and safeguards your information when you use our verification services.
+            </p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> January 2024</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-shield-alt"></i> 1. Information We Collect</h2>
+                <p>We collect information that you provide directly to us when you use our verification services:</p>
+
+                <h3>1.1 Business Information</h3>
+                <ul>
+                    <li>Company name and registration details</li>
+                    <li>Business contact information (email, phone, address)</li>
+                    <li>Tax identification numbers and legal documents</li>
+                    <li>Brand registration and trademark information</li>
+                </ul>
+
+                <h3>1.2 Verification Documents</h3>
+                <ul>
+                    <li>Sustainability claims and supporting evidence</li>
+                    <li>Supplier declarations and certifications</li>
+                    <li>Laboratory test reports and analysis certificates</li>
+                    <li>Manufacturing process documentation</li>
+                    <li>Environmental impact assessments</li>
+                </ul>
+
+                <h3>1.3 Technical Information</h3>
+                <ul>
+                    <li>IP addresses and device information</li>
+                    <li>Browser type and version</li>
+                    <li>Pages visited and time spent on our platform</li>
+                    <li>Cookies and similar tracking technologies</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-user-check"></i> 2. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-check-circle"></i> Verification Services</h4>
+                    <p>To authenticate sustainability claims against CCPA 2024 guidelines and create your verification
+                        website.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-gavel"></i> Compliance & Legal</h4>
+                    <p>To ensure compliance with Indian laws and regulations, including CCPA requirements.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-cogs"></i> Service Improvement</h4>
+                    <p>To enhance our verification processes, develop new features, and improve user experience.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-headset"></i> Customer Support</h4>
+                    <p>To provide technical support, respond to inquiries, and communicate important updates.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <p><i class="fas fa-exclamation-circle"></i> <strong>Important:</strong> We never sell your personal
+                        information to third parties. Your verification documents are used solely for authentication
+                        purposes.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-lock"></i> 3. Data Security</h2>
+                <p>We implement robust security measures to protect your information:</p>
+
+                <h3>3.1 Technical Security</h3>
+                <ul>
+                    <li>256-bit SSL encryption for all data transmissions</li>
+                    <li>Secure server infrastructure with firewalls</li>
+                    <li>Regular security audits and vulnerability assessments</li>
+                    <li>Two-factor authentication for account access</li>
+                </ul>
+
+                <h3>3.2 Data Storage</h3>
+                <ul>
+                    <li>Secure cloud storage with redundancy</li>
+                    <li>Regular encrypted backups</li>
+                    <li>Access controls and audit trails</li>
+                    <li>Data retention policies in compliance with Indian laws</li>
+                </ul>
+
+                <h3>3.3 Employee Access</h3>
+                <ul>
+                    <li>Strict confidentiality agreements with all employees</li>
+                    <li>Role-based access controls</li>
+                    <li>Regular security training and awareness programs</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-share-square"></i> 4. Information Sharing</h2>
+                <p>We only share your information in the following circumstances:</p>
+
+                <h3>4.1 With Your Consent</h3>
+                <p>When you explicitly authorize us to share specific information for verification purposes.</p>
+
+                <h3>4.2 Legal Requirements</h3>
+                <p>When required by law, court order, or government authority, including CCPA compliance requests.</p>
+
+                <h3>4.3 Service Providers</h3>
+                <p>With trusted third-party service providers who assist in delivering our services (under strict
+                    confidentiality agreements).</p>
+
+                <h3>4.4 Business Transfers</h3>
+                <p>In connection with a merger, acquisition, or sale of assets, with appropriate privacy protections.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-cookie-bite"></i> 5. Cookies & Tracking</h2>
+                <p>We use cookies and similar technologies to enhance your experience:</p>
+
+                <h3>5.1 Essential Cookies</h3>
+                <p>Required for basic website functionality and security features.</p>
+
+                <h3>5.2 Analytics Cookies</h3>
+                <p>Help us understand how visitors interact with our platform to improve our services.</p>
+
+                <h3>5.3 Preference Cookies</h3>
+                <p>Remember your settings and preferences for future visits.</p>
+
+                <p>You can control cookie preferences through your browser settings. However, disabling essential
+                    cookies may affect service functionality.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-user-cog"></i> 6. Your Rights</h2>
+                <p>You have the following rights regarding your personal information:</p>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-eye"></i> Right to Access</h4>
+                    <p>Request a copy of the personal information we hold about you.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-edit"></i> Right to Correction</h4>
+                    <p>Request correction of inaccurate or incomplete information.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-trash-alt"></i> Right to Deletion</h4>
+                    <p>Request deletion of your personal information, subject to legal requirements.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4><i class="fas fa-ban"></i> Right to Object</h4>
+                    <p>Object to processing of your personal information in certain circumstances.</p>
+                </div>
+
+                <p>To exercise these rights, please contact us using the information below.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-globe-asia"></i> 7. International Data Transfers</h2>
+                <p>As an Indian company serving Indian businesses, all data is processed and stored within India. We
+                    comply with the Information Technology Act, 2000 and related data protection rules.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-child"></i> 8. Children's Privacy</h2>
+                <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect
+                    personal information from children. If you believe we have collected information from a child,
+                    please contact us immediately.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2><i class="fas fa-sync-alt"></i> 9. Policy Updates</h2>
+                <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal
+                    requirements. We will notify you of significant changes through email or prominent notices on our
+                    website.</p>
+
+                <div class="highlight-box">
+                    <p><i class="fas fa-bell"></i> <strong>Notification:</strong> Continued use of our services after
+                        policy changes constitutes acceptance of the updated terms.</p>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact.greenxguard@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 82409 47366</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>West Bengal, India</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem; color: var(--gray-600);">
+                    Data Protection Officer: Arijit Sarkar<br>
+                    Response Time: Within 7 business days
+                </p>
+            </div>
+
+            <div class="last-updated">
+                <p>This Privacy Policy is effective as of January 2024.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="#home" class="logo-wrapper">
+                            <span class="brand-name">GreenXguard</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">CCPA-compliant green claim verification for Indian startups. Avoid
+                        penalties, build trust.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Basic Verification</a></li>
+                        <li><a href="services.html">Verified Badge</a></li>
+                        <li><a href="services.html">CCPA Compliance</a></li>
+                        <li><a href="services.html">Digital Verification Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact.greenxguard@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 82409 47366</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 GreenXguard. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a
+                        href="termsofservice.html">Terms of
+                        Service</a> | <a href="#">*Disclaimer</a></p>
+                <p class="disclaimer">GreenXguard is a private verification service and not a government certification
+                    body. We help companies comply with CCPA guidelines. </p>
+                <p class="disclaimer" style="font-size: larger; color: rgb(255, 255, 255);">Our verification is based on
+                    client-provided documentation. We are not liable for inaccuracies in client-submitted information.
+                    Clients remain solely responsible for claim authenticity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Mobile Menu Toggle
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close menu when clicking on a link
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                        menuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // Sticky Navbar
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+
+                    if (href === '#' || href.includes('.html')) return;
+
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Highlight current page in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Back to top button functionality
+            const backToTop = document.createElement('button');
+            backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+            backToTop.className = 'back-to-top';
+            backToTop.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                width: 3rem;
+                height: 3rem;
+                background: var(--primary-green);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+                z-index: 1000;
+                box-shadow: var(--shadow-lg);
+                transition: all 0.3s ease;
+            `;
+
+            backToTop.addEventListener('mouseenter', () => {
+                backToTop.style.transform = 'translateY(-5px)';
+                backToTop.style.boxShadow = 'var(--shadow-xl)';
+            });
+
+            backToTop.addEventListener('mouseleave', () => {
+                backToTop.style.transform = 'translateY(0)';
+                backToTop.style.boxShadow = 'var(--shadow-lg)';
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            document.body.appendChild(backToTop);
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            // Add animation to policy sections on scroll
+            const policySections = document.querySelectorAll('.policy-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            policySections.forEach(section => {
+                section.style.opacity = '0';
+                observer.observe(section);
+            });
+
+            // Add animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .policy-section {
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>

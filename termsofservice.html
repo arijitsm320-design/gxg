@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | GreenXguard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Terms of Service Specific Styles */
+        .terms-hero {
+            padding: 10rem 1.5rem 5rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .terms-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%2310B981" fill-opacity="0.05" d="M0,0 L100,0 L100,100 Z"/></svg>');
+            background-size: cover;
+            opacity: 0.5;
+        }
+
+        .terms-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            position: relative;
+            z-index: 2;
+        }
+
+        .terms-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        .terms-content {
+            padding: 5rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .terms-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .terms-section h2 i {
+            color: var(--primary-green);
+        }
+
+        .terms-section h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--gray-800);
+        }
+
+        .terms-section h4 {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--gray-700);
+        }
+
+        .terms-section p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul,
+        .terms-section ol {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background: #FEF3C7;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid #F59E0B;
+            margin: 2rem 0;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #92400E;
+            font-weight: 500;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .warning-box i {
+            color: #F59E0B;
+            margin-top: 0.25rem;
+        }
+
+        .important-box {
+            background: #DBEAFE;
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid #3B82F6;
+            margin: 2rem 0;
+        }
+
+        .important-box p {
+            margin: 0;
+            color: #1E40AF;
+            font-weight: 500;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .important-box i {
+            color: #3B82F6;
+            margin-top: 0.25rem;
+        }
+
+        .definition-box {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 2rem 0;
+        }
+
+        .definition-box h4 {
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .definition-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .definition-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .definition-term {
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .definition-meaning {
+            color: var(--gray-600);
+        }
+
+        .acceptance-section {
+            background: linear-gradient(135deg, var(--primary-light), #D1FAE5);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .acceptance-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .acceptance-box {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .contact-info {
+            background: var(--gray-50);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-700);
+        }
+
+        .contact-item i {
+            color: var(--primary-green);
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .terms-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .terms-table th {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .terms-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            color: var(--gray-600);
+        }
+
+        .terms-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .terms-table tr:nth-child(even) {
+            background: var(--gray-50);
+        }
+
+        @media (max-width: 768px) {
+            .terms-title {
+                font-size: 2.5rem;
+            }
+
+            .terms-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .acceptance-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.jpeg" alt="GreenXguard Logo" class="logo-img">
+                <span class="brand-name">GreenXguard</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="whyus.html" class="nav-link">Why Us?</a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <div class="hamburger-box">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="terms-hero">
+        <div class="container">
+            <h1 class="terms-title">Terms of Service</h1>
+            <p class="terms-subtitle">
+                Please read these Terms of Service carefully before using GreenXguard's verification services.
+                By accessing or using our services, you agree to be bound by these terms.
+            </p>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> January 2025</p>
+            </div>
+
+            <div class="definition-box">
+                <h4>Key Definitions</h4>
+                <div class="definition-item">
+                    <div class="definition-term">"Service" or "Services"</div>
+                    <div class="definition-meaning">Refers to the GreenXguard verification platform, including dynamic
+                        verification websites, QR code integration, and CCPA compliance verification.</div>
+                </div>
+                <div class="definition-item">
+                    <div class="definition-term">"Client" or "You"</div>
+                    <div class="definition-meaning">Refers to the business entity or individual using GreenXguard
+                        services.</div>
+                </div>
+                <div class="definition-item">
+                    <div class="definition-term">"Verification Website"</div>
+                    <div class="definition-meaning">The dynamic webpage created by GreenXguard to showcase authenticated
+                        sustainability claims.</div>
+                </div>
+                <div class="definition-item">
+                    <div class="definition-term">"CCPA"</div>
+                    <div class="definition-meaning">Central Consumer Protection Authority, Government of India.</div>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-file-contract"></i> 1. Acceptance of Terms</h2>
+                <p>By accessing or using GreenXguard's services, you acknowledge that you have read, understood, and
+                    agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you
+                    must not use our services.</p>
+
+                <div class="acceptance-section">
+                    <h3>Electronic Agreement</h3>
+                    <p>These Terms constitute an electronic agreement between you and GreenXguard. By clicking "I Agree"
+                        or using our services, you consent to the electronic form of this agreement.</p>
+                    <div class="acceptance-box">
+                        <p><strong>Your use of GreenXguard services indicates your acceptance of these Terms.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-user-check"></i> 2. Eligibility</h2>
+                <p>To use GreenXguard services, you must:</p>
+
+                <ul>
+                    <li>Be at least 18 years of age or have legal authority to represent a business entity</li>
+                    <li>Have a valid Indian business registration</li>
+                    <li>Provide accurate and complete information during registration</li>
+                    <li>Have the authority to bind your business to these Terms</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Misrepresentation of
+                        business information may result in immediate termination of services and legal action.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-clipboard-check"></i> 3. Service Description</h2>
+                <p>GreenXguard provides sustainability claim verification services for Indian D2C brands, including:</p>
+
+                <div class="table-container">
+                    <table class="terms-table">
+                        <thead>
+                            <tr>
+                                <th>Service Component</th>
+                                <th>Description</th>
+                                <th>Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dynamic Verification Website</td>
+                                <td>Custom webpage showcasing authenticated sustainability claims</td>
+                                <td>✓ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>CCPA Compliance Verification</td>
+                                <td>Authentication of claims against CCPA 2024 guidelines</td>
+                                <td>✓ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>QR Code Integration</td>
+                                <td>Unique QR code linking to verification page</td>
+                                <td>✓ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Digital Verification Badge</td>
+                                <td>Badge for display on website and marketing materials</td>
+                                <td>✓ Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Live Updates</td>
+                                <td>Ability to add new claims after initial verification</td>
+                                <td>✓ Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="important-box">
+                    <p><i class="fas fa-info-circle"></i> <strong>Important:</strong> GreenXguard is a private
+                        verification service and not a government certification body. We help companies comply with CCPA
+                        guidelines.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-shield-alt"></i> 4. Client Responsibilities</h2>
+
+                <h3>4.1 Accurate Information</h3>
+                <p>You agree to provide accurate, complete, and current information, including:</p>
+                <ul>
+                    <li>Business registration documents</li>
+                    <li>Sustainability claims with supporting evidence</li>
+                    <li>Supplier declarations and certifications</li>
+                    <li>Any other documentation requested for verification</li>
+                </ul>
+
+                <h3>4.2 Evidence Authenticity</h3>
+                <p>You are solely responsible for the authenticity of all documents and information submitted.
+                    GreenXguard verifies claims based on client-provided documentation.</p>
+
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Client Liability:</strong> Clients remain
+                        solely responsible for claim authenticity. GreenXguard is not liable for inaccuracies in
+                        client-submitted information.</p>
+                </div>
+
+                <h3>4.3 CCPA Compliance</h3>
+                <p>While we verify claims against CCPA guidelines, ultimate compliance responsibility rests with your
+                    business. We recommend consulting legal counsel for comprehensive compliance.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-credit-card"></i> 5. Payment Terms</h2>
+
+                <h3>5.1 Free Trial</h3>
+                <p>We offer a 30-day free trial with full access to all features. No credit card is required to start
+                    the trial.</p>
+
+                <h3>5.2 Subscription Fees</h3>
+                <p>After the trial period, services continue at ₹2,999/year unless cancelled. Payment is due annually in
+                    advance.</p>
+
+                <h3>5.3 Billing and Renewal</h3>
+                <ul>
+                    <li>Annual subscription automatically renews unless cancelled</li>
+                    <li>We'll notify you 30 days before renewal</li>
+                    <li>Prices may change with 60 days notice</li>
+                    <li>All fees are exclusive of applicable taxes</li>
+                </ul>
+
+                <h3>5.4 Refund Policy</h3>
+                <p>Due to the nature of our verification services, we do not offer refunds for completed verifications.
+                    Service issues are addressed through our support channels.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-ban"></i> 6. Prohibited Activities</h2>
+                <p>You agree not to:</p>
+
+                <ul>
+                    <li>Submit false or misleading information</li>
+                    <li>Use GreenXguard verification for illegal purposes</li>
+                    <li>Attempt to reverse engineer our platform</li>
+                    <li>Share login credentials with unauthorized users</li>
+                    <li>Use our services to violate any laws or regulations</li>
+                    <li>Make sustainability claims that cannot be substantiated</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><i class="fas fa-gavel"></i> <strong>Legal Compliance:</strong> Violation of these prohibitions
+                        may result in immediate service termination and reporting to appropriate authorities, including
+                        CCPA.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-times-circle"></i> 7. Termination</h2>
+
+                <h3>7.1 By Client</h3>
+                <p>You may cancel your subscription at any time through your account dashboard. Cancellation takes
+                    effect at the end of your current billing period.</p>
+
+                <h3>7.2 By GreenXguard</h3>
+                <p>We may terminate or suspend your access immediately if:</p>
+                <ul>
+                    <li>You violate these Terms</li>
+                    <li>We suspect fraudulent activity</li>
+                    <li>Required by law or government authority</li>
+                    <li>You fail to pay fees when due</li>
+                </ul>
+
+                <h3>7.3 Effect of Termination</h3>
+                <p>Upon termination:</p>
+                <ul>
+                    <li>Your verification website will be deactivated</li>
+                    <li>Access to your account will be revoked</li>
+                    <li>Outstanding fees remain payable</li>
+                    <li>We'll retain verification records as required by law</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-balance-scale"></i> 8. Limitation of Liability</h2>
+
+                <div class="important-box">
+                    <p><i class="fas fa-info-circle"></i> <strong>Important Disclaimer:</strong> Our verification is
+                        based on client-provided documentation. We are not liable for inaccuracies in client-submitted
+                        information.</p>
+                </div>
+
+                <p>To the maximum extent permitted by law:</p>
+
+                <ul>
+                    <li>GreenXguard's total liability shall not exceed the amount paid by you in the last 12 months</li>
+                    <li>We are not liable for indirect, incidental, or consequential damages</li>
+                    <li>We are not liable for any CCPA penalties incurred by clients</li>
+                    <li>Verification does not guarantee immunity from government inquiry</li>
+                </ul>
+
+                <h3>8.1 Indemnification</h3>
+                <p>You agree to indemnify and hold harmless GreenXguard from any claims, damages, or expenses arising
+                    from:</p>
+                <ul>
+                    <li>Your use of our services</li>
+                    <li>Your violation of these Terms</li>
+                    <li>Inaccurate information provided by you</li>
+                    <li>Any CCPA penalties or legal actions against your business</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-copyright"></i> 9. Intellectual Property</h2>
+
+                <h3>9.1 Our Intellectual Property</h3>
+                <p>All GreenXguard trademarks, logos, and platform technology are our property. You may use our
+                    verification badge only as authorized.</p>
+
+                <h3>9.2 Your Content</h3>
+                <p>You retain ownership of all documents and information submitted. By submitting content, you grant us
+                    license to use it for verification purposes.</p>
+
+                <h3>9.3 Verification Website</h3>
+                <p>While the verification website content is yours, the platform and design remain our intellectual
+                    property.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-exchange-alt"></i> 10. Modifications to Terms</h2>
+                <p>We may modify these Terms at any time. We'll notify you of significant changes via email or through
+                    our platform. Continued use after changes constitutes acceptance.</p>
+
+                <h3>10.1 Service Modifications</h3>
+                <p>We may modify or discontinue services with 60 days notice. We'll make reasonable efforts to minimize
+                    disruption.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><i class="fas fa-gavel"></i> 11. Governing Law</h2>
+                <p>These Terms are governed by Indian law. Any disputes shall be subject to the exclusive jurisdiction
+                    of courts in Mumbai, India.</p>
+
+                <h3>11.1 Dispute Resolution</h3>
+                <p>We prefer to resolve disputes informally. If needed, disputes will be resolved through arbitration in
+                    accordance with Indian Arbitration and Conciliation Act, 1996.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>For questions about these Terms or our services, please contact us:</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact.greenxguard@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 82409 47366</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>West Bengal, India</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1.5rem; color: var(--gray-600);">
+                    Legal Department: Arijit Sarkar<br>
+                    Response Time: Within 10 business days
+                </p>
+            </div>
+
+            <div class="last-updated">
+                <p>These Terms of Service are effective as of January 2025.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="#home" class="logo-wrapper">
+                            <span class="brand-name">GreenXguard</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">CCPA-compliant green claim verification for Indian startups. Avoid
+                        penalties, build trust.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Basic Verification</a></li>
+                        <li><a href="services.html">Verified Badge</a></li>
+                        <li><a href="services.html">CCPA Compliance</a></li>
+                        <li><a href="services.html">Digital Verification Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact.greenxguard@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 82409 47366</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 GreenXguard. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a
+                        href="termsofservice.html">Terms of
+                        Service</a> | <a href="#">*Disclaimer</a></p>
+                <p class="disclaimer">GreenXguard is a private verification service and not a government certification
+                    body. We help companies comply with CCPA guidelines. </p>
+                <p class="disclaimer" style="font-size: larger; color: rgb(255, 255, 255);">Our verification is based on
+                    client-provided documentation. We are not liable for inaccuracies in client-submitted information.
+                    Clients remain solely responsible for claim authenticity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Mobile Menu Toggle
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+                });
+
+                // Close menu when clicking on a link
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                        menuToggle.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            // Sticky Navbar
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+
+                    if (href === '#' || href.includes('.html')) return;
+
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Highlight current page in navigation
+            const currentPage = window.location.pathname.split('/').pop();
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Back to top button functionality
+            const backToTop = document.createElement('button');
+            backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+            backToTop.className = 'back-to-top';
+            backToTop.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                width: 3rem;
+                height: 3rem;
+                background: var(--primary-green);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+                z-index: 1000;
+                box-shadow: var(--shadow-lg);
+                transition: all 0.3s ease;
+            `;
+
+            backToTop.addEventListener('mouseenter', () => {
+                backToTop.style.transform = 'translateY(-5px)';
+                backToTop.style.boxShadow = 'var(--shadow-xl)';
+            });
+
+            backToTop.addEventListener('mouseleave', () => {
+                backToTop.style.transform = 'translateY(0)';
+                backToTop.style.boxShadow = 'var(--shadow-lg)';
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            document.body.appendChild(backToTop);
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            // Add animation to terms sections on scroll
+            const termsSections = document.querySelectorAll('.terms-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            termsSections.forEach(section => {
+                section.style.opacity = '0';
+                observer.observe(section);
+            });
+
+            // Add animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .terms-section {
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Add print functionality
+            const printButton = document.createElement('button');
+            printButton.innerHTML = '<i class="fas fa-print"></i> Print Terms';
+            printButton.className = 'print-terms';
+            printButton.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                left: 2rem;
+                background: var(--primary-green);
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: var(--radius-md);
+                cursor: pointer;
+                font-weight: 500;
+                box-shadow: var(--shadow-lg);
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                z-index: 1000;
+                transition: all 0.3s ease;
+            `;
+
+            printButton.addEventListener('mouseenter', () => {
+                printButton.style.transform = 'translateY(-2px)';
+                printButton.style.boxShadow = 'var(--shadow-xl)';
+            });
+
+            printButton.addEventListener('mouseleave', () => {
+                printButton.style.transform = 'translateY(0)';
+                printButton.style.boxShadow = 'var(--shadow-lg)';
+            });
+
+            printButton.addEventListener('click', () => {
+                window.print();
+            });
+
+            document.body.appendChild(printButton);
+
+            // Add print styles
+            const printStyle = document.createElement('style');
+            printStyle.textContent = `
+                @media print {
+                    .navbar,
+                    .footer,
+                    .back-to-top,
+                    .print-terms {
+                        display: none !important;
+                    }
+                    
+                    .terms-hero {
+                        padding: 2rem 0 !important;
+                    }
+                    
+                    .terms-content {
+                        padding: 1rem !important;
+                    }
+                    
+                    body {
+                        font-size: 12pt !important;
+                        line-height: 1.5 !important;
+                    }
+                    
+                    .terms-section {
+                        break-inside: avoid;
+                        margin-bottom: 2rem !important;
+                        padding-bottom: 2rem !important;
+                    }
+                }
+            `;
+            document.head.appendChild(printStyle);
+        });
+    </script>
+</body>
+
+</html>

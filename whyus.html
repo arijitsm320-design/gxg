@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose GreenXguard | The Future of Sustainability Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Why Us Page Specific Styles */
+        .why-hero {
+            padding: 10rem 1.5rem 5rem;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+
+        .why-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .advantage-section {
+            padding: 5rem 1.5rem;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .advantage-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .advantage-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .advantage-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .advantage-card h3 {
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .advantage-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .opportunity-section {
+            padding: 5rem 1.5rem;
+            background: var(--light-green);
+        }
+
+        .opportunity-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .opportunity-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .opportunity-stat {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .opportunity-stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .opportunity-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .opportunity-label {
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .differentiator-section {
+            padding: 5rem 1.5rem;
+        }
+
+        .differentiator-card {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+        }
+
+        .differentiator-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .differentiator-icon {
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .differentiator-points {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .point-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .point-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .point-content h4 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .point-content p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .impact-section {
+            padding: 5rem 1.5rem;
+            background: var(--gray-50);
+        }
+
+        .impact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .impact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .impact-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .impact-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .impact-item p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        .early-adopter-section {
+            padding: 5rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-green));
+            color: white;
+            text-align: center;
+        }
+
+        .early-adopter-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .early-adopter-icon {
+            width: 5rem;
+            height: 5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto 2rem;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+        }
+
+        .benefit-item i {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-light);
+        }
+
+        .trust-section {
+            padding: 5rem 1.5rem;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .trust-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .trust-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .trust-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .trust-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .trust-card p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        .faq-section {
+            padding: 5rem 1.5rem;
+            background: var(--gray-50);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            text-align: left;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--gray-900);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .why-title {
+                font-size: 2.5rem;
+            }
+
+            .advantage-card {
+                padding: 1.5rem;
+            }
+
+            .differentiator-card {
+                padding: 2rem;
+            }
+
+            .point-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .early-adopter-card {
+                padding: 2rem;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <img src="logo.png" alt="GreenXguard Logo" class="logo-img">
+                <span class="brand-name">GreenXguard</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="whyus.html" class="nav-link active">Why Us?</a>
+            </div>
+
+            <button class="hamburger-menu" id="menuToggle" aria-label="Toggle menu">
+                <div class="hamburger-icon">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </div>
+            </button>
+
+            <nav class="mobile-nav" id="navMenu">
+                <div class="mobile-nav-header">
+                    <span class="nav-title">Menu</span>
+                    <button class="nav-close" id="navClose">×</button>
+                </div>
+                <div class="mobile-nav-content">
+                    <a href="#home" class="mobile-nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="#services" class="mobile-nav-link">
+                        <i class="fas fa-shield-alt"></i> Services
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="why-hero">
+        <div class="container">
+            <h1 class="why-title">Be Among the First Verified Sustainable Brands in India</h1>
+            <p class="why-subtitle">
+                Join us in building a new standard of trust for Indian D2C brands. As pioneers in CCPA-compliant
+                sustainability verification, we're creating the platform that will define authentic green claims.
+            </p>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantage-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose GreenXguard?</h2>
+            <p class="section-subtitle">We're building the verification platform for the future of sustainable commerce
+            </p>
+
+            <div class="advantage-grid">
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>CCPA-First Design</h3>
+                    <p>Our verification framework is built specifically for CCPA 2024-25 guidelines from day one. We're
+                        ahead of the curve on compliance.</p>
+                </div>
+
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Modern Digital Verification</h3>
+                    <p>Every verified brand gets a unique webpage with QR code - making your sustainability claims
+                        instantly verifiable by consumers.</p>
+                </div>
+
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Future-Proof Protection</h3>
+                    <p>With CCPA penalties starting at ₹10 lakhs, our verification provides essential legal protection
+                        as regulations tighten.</p>
+                </div>
+
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Pioneer Advantage</h3>
+                    <p>Be among the first brands with verified sustainability claims. Early adopters get maximum
+                        visibility and trust-building time.</p>
+                </div>
+
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Competitive Edge</h3>
+                    <p>Stand out in the crowded D2C market with verified sustainability claims that consumers can
+                        actually trust.</p>
+                </div>
+
+                <div class="advantage-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="advantage-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Made for Indian D2C</h3>
+                    <p>Designed specifically for the unique needs and challenges of Indian direct-to-consumer brands.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opportunity -->
+    <section class="opportunity-section">
+        <div class="container">
+            <div class="opportunity-content">
+                <h2 class="section-title">The Market Opportunity</h2>
+                <p class="section-subtitle">Indian consumers are demanding more transparency - be ready to meet that
+                    demand</p>
+
+                <div class="opportunity-stats">
+                    <div class="opportunity-stat animate-on-scroll" data-animation="fadeInUp">
+                        <div class="opportunity-value">87%</div>
+                        <div class="opportunity-label">of Indian consumers want sustainable options</div>
+                    </div>
+
+                    <div class="opportunity-stat animate-on-scroll" data-animation="fadeInUp">
+                        <div class="opportunity-value">₹10L</div>
+                        <div class="opportunity-label">Minimum CCPA penalty for greenwashing</div>
+                    </div>
+
+                    <div class="opportunity-stat animate-on-scroll" data-animation="fadeInUp">
+                        <div class="opportunity-value">2024</div>
+                        <div class="opportunity-label">CCPA begins strict enforcement</div>
+                    </div>
+
+                    <div class="opportunity-stat animate-on-scroll" data-animation="fadeInUp">
+                        <div class="opportunity-value">70%</div>
+                        <div class="opportunity-label">Higher trust in verified claims</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiator -->
+    <section class="differentiator-section">
+        <div class="container">
+            <h2 class="section-title">How We're Different</h2>
+            <p class="section-subtitle">We're not just another certification - we're building the trust infrastructure
+                for Indian e-commerce</p>
+
+            <div class="differentiator-card animate-on-scroll" data-animation="fadeInUp">
+                <div class="differentiator-header">
+                    <div class="differentiator-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>The GreenXguard Difference</h3>
+                    <p class="section-subtitle">Why we're building something fundamentally different</p>
+                </div>
+
+                <div class="differentiator-points">
+                    <div class="point-item">
+                        <div class="point-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>Vision-Driven Approach</h4>
+                            <p>We're working toward a future where every sustainable claim in India is verifiable and
+                                trustworthy. We're not just checking boxes - we're building trust infrastructure.</p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <div class="point-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>Brand Partnership Focus</h4>
+                            <p>We partner with brands from day one, helping them build authentic sustainability stories
+                                that consumers can believe in.</p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <div class="point-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>Digital-First Transparency</h4>
+                            <p>Our QR-coded verification pages give consumers instant access to see exactly what makes
+                                your brand sustainable - unprecedented transparency.</p>
+                        </div>
+                    </div>
+
+                    <div class="point-item">
+                        <div class="point-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="point-content">
+                            <h4>Market Education</h4>
+                            <p>We're educating both brands and consumers about what genuine sustainability looks like,
+                                raising standards across the industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-content">
+                <h2 class="section-title">Expected Impact for Early Adopters</h2>
+                <p class="section-subtitle">Becoming a verified brand delivers tangible benefits from day one</p>
+
+                <div class="impact-grid">
+                    <div class="impact-item animate-on-scroll" data-animation="fadeInUp">
+                        <div class="impact-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>Legal Protection</h3>
+                        <p>Documented verification helps defend against CCPA penalties as regulations tighten</p>
+                    </div>
+
+                    <div class="impact-item animate-on-scroll" data-animation="fadeInUp">
+                        <div class="impact-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Consumer Trust</h3>
+                        <p>Verified claims build immediate credibility with sustainability-conscious shoppers</p>
+                    </div>
+
+                    <div class="impact-item animate-on-scroll" data-animation="fadeInUp">
+                        <div class="impact-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Market Differentiation</h3>
+                        <p>Stand out in crowded categories with authenticated sustainability credentials</p>
+                    </div>
+
+                    <div class="impact-item animate-on-scroll" data-animation="fadeInUp">
+                        <div class="impact-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Pioneer Status</h3>
+                        <p>Be recognized as an industry leader in authentic sustainability practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Trust -->
+    <section class="trust-section">
+        <div class="container">
+            <h2 class="section-title">Built on Solid Foundations</h2>
+            <p class="section-subtitle">Our verification platform is designed for trust and reliability</p>
+
+            <div class="trust-grid">
+                <div class="trust-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="trust-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Your documents and data are protected with bank-level encryption and security protocols</p>
+                </div>
+
+                <div class="trust-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="trust-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Legal Expertise</h3>
+                    <p>Our verification framework is designed by consumer protection and sustainability law experts</p>
+                </div>
+
+                <div class="trust-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Rigorous Process</h3>
+                    <p>Every verification undergoes multiple quality checks by different sustainability experts</p>
+                </div>
+
+                <div class="trust-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Dedicated Support</h3>
+                    <p>Every verified brand gets dedicated account support to ensure successful implementation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about getting verified with GreenXguard</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is this a government certification?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, we are a private verification service designed specifically to help brands comply with
+                            CCPA guidelines and avoid penalties. Our verification is based on CCPA's green claim
+                            guidelines and international sustainability standards.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does the first verification take?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>For our founding members, we're offering expedited 24-hour verification. Our standard process
+                            takes 3-5 business days, but we're prioritizing our early adopters to get them verified
+                            quickly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What if I'm not sure my claims are verifiable?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer a free claims assessment for founding members. Our experts will review your
+                            sustainability claims and guide you on what evidence you need to become verified.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does the digital verification page work?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each verified brand gets a unique webpage displaying their verified sustainability claims.
+                            Customers can scan a QR code on your packaging or click a link on your website to see
+                            authenticated proof of your claims.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes you different from other verification services?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We're the first verification service built specifically for CCPA 2024 compliance, designed
+                            exclusively for Indian D2C brands, and focused on digital transparency through QR-coded
+                            verification pages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I add more sustainability claims later?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! As your brand grows and adds new sustainable practices, we can verify additional
+                            claims and update your digital verification page to reflect your evolving sustainability
+                            journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA
+    <section class="vision-banner">
+        <div class="container">
+            <div class="vision-content">
+                <h2 class="vision-title">Help Us Build the Future of Trust</h2>
+                <p class="vision-text">
+                    As a founding member, you cannot verify your brand. - But you can help building the standard
+                    for sustainability verification in India..
+                </p>
+                <div class="hero-actions" style="margin-top: 2rem;">
+                    <a href="nopage.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-crown"></i> Join as Founding Member
+                    </a>
+                    <a href="about.html" class="btn btn-outline btn-large" style="color: white; border-color: white;">
+                        <i class="fas fa-book"></i> Learn About Our Vision
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="#home" class="logo-wrapper">
+                            <span class="brand-name">GreenXguard</span>
+                        </a>
+                    </div>
+                    <p class="footer-description">CCPA-compliant green claim verification for Indian startups. Avoid
+                        penalties, build trust.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Basic Verification</a></li>
+                        <li><a href="services.html">Verified Badge</a></li>
+                        <li><a href="services.html">CCPA Compliance</a></li>
+                        <li><a href="services.html">Digital Verification Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact.greenxguard@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +91 82409 47366</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 GreenXguard. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a
+                        href="termsofservice.html">Terms of
+                        Service</a> | <a href="#">*Disclaimer</a></p>
+                <p class="disclaimer">GreenXguard is a private verification service and not a government certification
+                    body. We help companies comply with CCPA guidelines. </p>
+                <p class="disclaimer" style="font-size: larger; color: rgb(255, 255, 255);">Our verification is based on
+                    client-provided documentation. We are not liable for inaccuracies in client-submitted information.
+                    Clients remain solely responsible for claim authenticity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
